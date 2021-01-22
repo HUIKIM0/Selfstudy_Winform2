@@ -86,5 +86,16 @@ namespace Selfstudy_Winform2
                 tboxConfigData.Text = sb.ToString();
             }
         }
+
+        /* config 가져오기 */
+        private void btnConfigRead_Click(object sender, EventArgs e)
+        {
+            string[] strConfig = tboxConfigData.Text.Split(new char[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries); // 자르고 버리기
+
+            tboxData.Text = strConfig[0];
+            cboxData.Checked = bool.Parse(strConfig[1]);
+            numData.Value = int.Parse(strConfig[2]);
+
+        }
     }
 }

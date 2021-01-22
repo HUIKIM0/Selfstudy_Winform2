@@ -150,6 +150,7 @@ namespace Selfstudy_Winform2
             this.btnConfigRead.TabIndex = 0;
             this.btnConfigRead.Text = "Config 가져오기";
             this.btnConfigRead.UseVisualStyleBackColor = true;
+            this.btnConfigRead.Click += new System.EventHandler(this.btnConfigRead_Click);
             // 
             // btnConfigSet
             // 
