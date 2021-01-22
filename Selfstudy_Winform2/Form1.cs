@@ -32,7 +32,7 @@ namespace Selfstudy_Winform2
             StringBuilder sb = new StringBuilder();
             sb.Append(strText + Enter);
             sb.Append(bChecked.ToString() + Enter); //bool -> string 형변환
-            sb.Append(iNumber.ToString());
+            sb.Append(iNumber.ToString());   //int -> string 형변환
 
             tboxConfigData.Text = sb.ToString();  //StringBuilder -> string 형변환
         }
@@ -51,9 +51,12 @@ namespace Selfstudy_Winform2
             {
                 strFilePath = SFDialog.FileName;   //파일 이름이랑 경로까지 다 가져옴
 
-                StreamWriter swSFDialog = new StreamWriter(strFilePath); //텍스트 파일 쓰기
-                swSFDialog.WriteLine(tboxConfigData.Text);  //tboxCinfigData의 내용 파일 안에다 쓰기
-                swSFDialog.Close(); //다 쓰고 닫기
+                //StreamWriter swSFDialog = new StreamWriter(strFilePath); //텍스트 파일 쓰기
+                //swSFDialog.WriteLine(tboxConfigData.Text);  //tboxCinfigData의 내용 파일 안에다 쓰기
+                //swSFDialog.Close(); //다 쓰고 닫기
+
+                /* File.IO 사용 ver */
+                File.WriteAllText(strFilePath, tboxConfigData.Text);
 
             }
         }
@@ -67,21 +70,24 @@ namespace Selfstudy_Winform2
             OFDialog.FileName = "*.txt";  //파일 이름
             OFDialog.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";  //파일 형식의 확장자들
 
-            if(OFDialog.ShowDialog() == DialogResult.OK)  // 파일 열기(OK)
+            StringBuilder sb = new StringBuilder();
+
+            if (OFDialog.ShowDialog() == DialogResult.OK)  // 파일 열기(OK)
             {
                 strFilePath = OFDialog.FileName;  //FilePath에 불러온 파일 이름 넣기
 
-                StreamReader srOFDialog = new StreamReader(strFilePath, Encoding.UTF8, true);
+                //StreamReader srOFDialog = new StreamReader(strFilePath, Encoding.UTF8, true);
 
+                ////불러온 파일의 텍스트가 마지막 줄이 아니면(false) 계속 돈다
+                //while (srOFDialog.EndOfStream == false) //EndOfStream 마지막 줄인지 아닌지 체크.
+                //{
+                //    sb.Append(srOFDialog.ReadLine() + Enter);  //ReadLine 한줄씩 읽어옴
 
-                StringBuilder sb = new StringBuilder();
+                //}
 
-                //불러온 파일의 텍스트가 마지막 줄이 아니면(false) 계속 돈다
-                while (srOFDialog.EndOfStream == false) //EndOfStream 마지막 줄인지 아닌지 체크.
-                {
-                    sb.Append(srOFDialog.ReadLine() + Enter);  //ReadLine 한줄씩 읽어옴
+                /* File.IO 사용 ver */
+                sb.Append(File.ReadAllText(strFilePath));
 
-                }
 
                 tboxConfigData.Text = sb.ToString();
             }
@@ -93,8 +99,8 @@ namespace Selfstudy_Winform2
             string[] strConfig = tboxConfigData.Text.Split(new char[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries); // 자르고 버리기
 
             tboxData.Text = strConfig[0];
-            cboxData.Checked = bool.Parse(strConfig[1]);
-            numData.Value = int.Parse(strConfig[2]);
+            cboxData.Checked = bool.Parse(strConfig[1]);    //string -> bool로 형변환
+            numData.Value = int.Parse(strConfig[2]);    //string -> int로 형변환
 
         }
     }
