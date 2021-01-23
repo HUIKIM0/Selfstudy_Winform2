@@ -51,13 +51,13 @@ namespace Selfstudy_Winform2
             {
                 strFilePath = SFDialog.FileName;   //파일 이름이랑 경로까지 다 가져옴
 
-                //StreamWriter swSFDialog = new StreamWriter(strFilePath); //텍스트 파일 쓰기
-                //swSFDialog.WriteLine(tboxConfigData.Text);  //tboxCinfigData의 내용 파일 안에다 쓰기
-                //swSFDialog.Close(); //다 쓰고 닫기
-
                 /* File.IO 사용 ver */
                 File.WriteAllText(strFilePath, tboxConfigData.Text);
 
+
+                //StreamWriter swSFDialog = new StreamWriter(strFilePath); //텍스트 파일 쓰기
+                //swSFDialog.WriteLine(tboxConfigData.Text);  //tboxCinfigData의 내용 파일 안에다 쓰기
+                //swSFDialog.Close(); //다 쓰고 닫기
             }
         }
 
@@ -76,6 +76,12 @@ namespace Selfstudy_Winform2
             {
                 strFilePath = OFDialog.FileName;  //FilePath에 불러온 파일 이름 넣기
 
+                /* File.IO 사용 ver */
+                sb.Append(File.ReadAllText(strFilePath));
+
+                tboxConfigData.Text = sb.ToString();
+
+
                 //StreamReader srOFDialog = new StreamReader(strFilePath, Encoding.UTF8, true);
 
                 ////불러온 파일의 텍스트가 마지막 줄이 아니면(false) 계속 돈다
@@ -84,12 +90,6 @@ namespace Selfstudy_Winform2
                 //    sb.Append(srOFDialog.ReadLine() + Enter);  //ReadLine 한줄씩 읽어옴
 
                 //}
-
-                /* File.IO 사용 ver */
-                sb.Append(File.ReadAllText(strFilePath));
-
-
-                tboxConfigData.Text = sb.ToString();
             }
         }
 
