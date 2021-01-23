@@ -13,6 +13,11 @@ namespace Selfstudy_Winform2
 {
     public partial class Form1 : Form
     {
+
+        CXMLControl _xml = new CXMLControl(); // 만들어 놓은 CXMLControl을 사용. 선언 및 초기화 (기본 생성자)
+        Dictionary<string, string> _dData = new Dictionary<string, string>();  // CXMLControl과 Data를 _dData 통해 주고받기. Dictionary형
+
+
         public Form1()
         {
             InitializeComponent();
@@ -30,9 +35,16 @@ namespace Selfstudy_Winform2
             int iNumber = (int)numData.Value;  //NumbericUpDown
 
             StringBuilder sb = new StringBuilder();
+
             sb.Append(strText + Enter);
             sb.Append(bChecked.ToString() + Enter); //bool -> string 형변환
             sb.Append(iNumber.ToString());   //int -> string 형변환
+
+            // Dictionary<키,값> UI에서 작성 한 항목과 값을 Key와 Value로 저장
+            //static 형태라서 바로 접근 사용 _xml 이 아니다
+            _dData.Add(CXMLControl._TEXT_DATA, strText);
+            _dData.Add(CXMLControl._CBOX_DATA, bChecked.ToString());
+            _dData.Add(CXMLControl._NUMBER_DATA, iNumber.ToString());
 
             tboxConfigData.Text = sb.ToString();  //StringBuilder -> string 형변환
         }
@@ -52,8 +64,10 @@ namespace Selfstudy_Winform2
                 strFilePath = SFDialog.FileName;   //파일 이름이랑 경로까지 다 가져옴
 
                 /* File.IO 사용 ver */
-                File.WriteAllText(strFilePath, tboxConfigData.Text);
+                // File.WriteAllText(strFilePath, tboxConfigData.Text);
 
+                /* XML 파일 생성. 저장할 데이터 _dData */
+                _xml.fXML_Writer(strFilePath, _dData);  
 
                 //StreamWriter swSFDialog = new StreamWriter(strFilePath); //텍스트 파일 쓰기
                 //swSFDialog.WriteLine(tboxConfigData.Text);  //tboxCinfigData의 내용 파일 안에다 쓰기
@@ -90,17 +104,27 @@ namespace Selfstudy_Winform2
                 //    sb.Append(srOFDialog.ReadLine() + Enter);  //ReadLine 한줄씩 읽어옴
 
                 //}
+
+                _dData.Clear();  //기존 데이터가 남아 있을 수도 있어서
+                _dData = _xml.fXML_Reader(strFilePath);    //읽어오는 거니까 경로만 필요
             }
         }
 
         /* config 가져오기 */
         private void btnConfigRead_Click(object sender, EventArgs e)
         {
-            string[] strConfig = tboxConfigData.Text.Split(new char[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries); // 자르고 버리기
+            //string[] strConfig = tboxConfigData.Text.Split(new char[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries); // 자르고 버리기
 
-            tboxData.Text = strConfig[0];
-            cboxData.Checked = bool.Parse(strConfig[1]);    //string -> bool로 형변환
-            numData.Value = int.Parse(strConfig[2]);    //string -> int로 형변환
+            //tboxData.Text = strConfig[0];
+            //cboxData.Checked = bool.Parse(strConfig[1]);    //string -> bool로 형변환
+            //numData.Value = int.Parse(strConfig[2]);    //string -> int로 형변환
+
+            /* 디렉토리에 있는 정보를 UI에 입력함 */
+            tboxData.Text = _dData[CXMLControl._TEXT_DATA];
+            cboxData.Checked = bool.Parse(_dData[CXMLControl._CBOX_DATA]);
+            numData.Value = int.Parse(_dData[CXMLControl._NUMBER_DATA]);
+
+
 
         }
     }
