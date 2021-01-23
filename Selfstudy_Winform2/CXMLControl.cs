@@ -16,9 +16,9 @@ namespace Selfstudy_Winform2
         public static string _NUMBER_DATA = "NUMBER DATA";
 
         
-        /* XML 저장 
-           strXMLPath ->저장 할 XML File의 경로 및 파일명
-           DXMLConfig -> XML로 저장 할 항목. Dictionary<키,벨류>를 갖는다 */
+        /* ★XML 저장하기★ 
+           strXMLPath ->저장 할 XML File의 ★경로 및 파일명
+           DXMLConfig -> ★XML로 저장 해줄거. Dictionary<키,벨류>를 갖는다 */
         public void fXML_Writer(string strXMLPath, Dictionary<string, string> DXMLConfig)
         {
 
@@ -45,7 +45,8 @@ namespace Selfstudy_Winform2
         }
 
 
-        /* XML 읽어오기
+        /* ★XML 읽어오기★
+         Dictionary 형태로 써줬으니까 Dictionary 형태로!  int stirng 이런거 써주듯 써준거다 헷갈 X
          string strXMLPath -> 읽어 올 XML File의 경로 및 파일명 */
         public Dictionary<string,string> fXML_Reader(string strXMLPATH)
         {
@@ -65,7 +66,7 @@ namespace Selfstudy_Winform2
                             rd.Read(); //다음 노드로 이동
 
 
-                            // 키 값을 기준으로 결과 값을 가져 옴
+                            // ★키 값을 기준★으로 결과 값을 가져 옴
                             // 키값과 가져온 결과 값을 Dictionary에 저장
                             string strTEXT = rd.ReadElementContentAsString(_TEXT_DATA, "");
                             DXMLConfig.Add(_TEXT_DATA, strTEXT);
@@ -80,7 +81,7 @@ namespace Selfstudy_Winform2
                 }
             }
 
-            return DXMLConfig;  // 디렉토리에 담겨진 값들 반환. 사용자가 필요한 값을 토스!
+            return DXMLConfig;  // Dictionary 담아준 읽은 값들 반환
         }
     }
 }

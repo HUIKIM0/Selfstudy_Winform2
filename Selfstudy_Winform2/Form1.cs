@@ -40,7 +40,7 @@ namespace Selfstudy_Winform2
             sb.Append(bChecked.ToString() + Enter); //bool -> string 형변환
             sb.Append(iNumber.ToString());   //int -> string 형변환
 
-            // Dictionary<키,값> UI에서 작성 한 항목과 값을 Key와 Value로 저장
+            // UI에서 작성 한 항목과 값을 딕셔너리 Key와 Value로 저장
             //static 형태라서 바로 접근 사용 _xml 이 아니다
             _dData.Add(CXMLControl._TEXT_DATA, strText);
             _dData.Add(CXMLControl._CBOX_DATA, bChecked.ToString());
