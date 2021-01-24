@@ -33,12 +33,12 @@ namespace Simple_Clicker
             this.btn50Add = new System.Windows.Forms.Button();
             this.btn3Add = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.lblTickPoint = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.lblTickPoint = new System.Windows.Forms.Label();
-            this.lblTotal = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,6 +50,7 @@ namespace Simple_Clicker
             this.btn1Add.TabIndex = 0;
             this.btn1Add.Text = "+1";
             this.btn1Add.UseVisualStyleBackColor = true;
+            this.btn1Add.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btn50Add
             // 
@@ -59,6 +60,7 @@ namespace Simple_Clicker
             this.btn50Add.TabIndex = 0;
             this.btn50Add.Text = "+50";
             this.btn50Add.UseVisualStyleBackColor = true;
+            this.btn50Add.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btn3Add
             // 
@@ -68,6 +70,7 @@ namespace Simple_Clicker
             this.btn3Add.TabIndex = 0;
             this.btn3Add.Text = "+3";
             this.btn3Add.UseVisualStyleBackColor = true;
+            this.btn3Add.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // groupBox1
             // 
@@ -80,6 +83,33 @@ namespace Simple_Clicker
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "점수";
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.lblTotal.Location = new System.Drawing.Point(15, 74);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(389, 108);
+            this.lblTotal.TabIndex = 7;
+            this.lblTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblTickPoint
+            // 
+            this.lblTickPoint.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblTickPoint.Location = new System.Drawing.Point(98, 24);
+            this.lblTickPoint.Name = "lblTickPoint";
+            this.lblTickPoint.Size = new System.Drawing.Size(306, 32);
+            this.lblTickPoint.TabIndex = 6;
+            this.lblTickPoint.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(15, 33);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(77, 15);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Tick Point:";
             // 
             // label1
             // 
@@ -107,33 +137,6 @@ namespace Simple_Clicker
             this.label3.Size = new System.Drawing.Size(51, 15);
             this.label3.TabIndex = 4;
             this.label3.Text = "(5000)";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(15, 33);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(77, 15);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Tick Point:";
-            // 
-            // lblTickPoint
-            // 
-            this.lblTickPoint.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblTickPoint.Location = new System.Drawing.Point(98, 24);
-            this.lblTickPoint.Name = "lblTickPoint";
-            this.lblTickPoint.Size = new System.Drawing.Size(306, 32);
-            this.lblTickPoint.TabIndex = 6;
-            this.lblTickPoint.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblTotal
-            // 
-            this.lblTotal.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lblTotal.Location = new System.Drawing.Point(15, 74);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(389, 108);
-            this.lblTotal.TabIndex = 7;
-            this.lblTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
