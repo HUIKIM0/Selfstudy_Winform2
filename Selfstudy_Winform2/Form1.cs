@@ -16,6 +16,7 @@ namespace Selfstudy_Winform2
 
         CXMLControl _xml = new CXMLControl(); // 만들어 놓은 CXMLControl을 사용. 선언 및 초기화 (기본 생성자)
         Dictionary<string, string> _dData = new Dictionary<string, string>();  // CXMLControl과 Data를 _dData 통해 주고받기. Dictionary형
+        string strPath = Application.StartupPath + "\\Save.txt";
 
 
         public Form1()

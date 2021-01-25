@@ -11,9 +11,10 @@ namespace Selfstudy_Winform2
     class CXMLControl
     {
         //DiDictionary 및 XML 태그 항목 정의 (static(정적): 프로그램 실행->메모리에 바로 할당
-        public static string _TEXT_DATA = "TEXT DATA";
+        public static string _TEXT_DATA = "TEXT_DATA";
         public static string _CBOX_DATA = "CBOX DATA";
-        public static string _NUMBER_DATA = "NUMBER DATA";
+        public static string _NUMBER_DATA = "NUMBER_DATA";
+        
 
         
         /* ★XML 저장하기★ 
@@ -38,7 +39,8 @@ namespace Selfstudy_Winform2
                 wr.WriteElementString(_CBOX_DATA, DXMLConfig[_CBOX_DATA]);
                 wr.WriteElementString(_NUMBER_DATA, DXMLConfig[_NUMBER_DATA]);
 
-               
+
+
                 wr.WriteEndElement();  //자식 node 닫기 </>
                 wr.WriteEndDocument();  //root node 닫기 </>
             }
@@ -74,7 +76,7 @@ namespace Selfstudy_Winform2
                             string strCBOX = rd.ReadElementContentAsString(_CBOX_DATA, "");
                             DXMLConfig.Add(_CBOX_DATA, strCBOX);
 
-                            string strNUMBER = rd.ReadElementContentAsString(_NUMBER_DATA "");
+                            string strNUMBER = rd.ReadElementContentAsString(_NUMBER_DATA, "");
                             DXMLConfig.Add(_NUMBER_DATA, strNUMBER);
                         }
                     }
