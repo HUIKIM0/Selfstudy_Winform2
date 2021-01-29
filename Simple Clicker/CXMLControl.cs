@@ -28,7 +28,7 @@ namespace Simple_Clicker
 
             
             //using 벗어나면 자동으로 Dispose 하여 메모리를 관리
-            using (XmlWriter wr = XmlWriter.Create(sb))  //sb에 만든 XML 넣어줄거임
+            using (XmlWriter wr = XmlWriter.Create(sb))  // XML 생성★ 
             {
 
                 // XML 형태의 Data를 작성

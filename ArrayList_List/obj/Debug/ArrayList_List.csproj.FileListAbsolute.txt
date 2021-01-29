@@ -1,0 +1,10 @@
+D:\dev\C#Work\Selfstudy_Winform2\ArrayList_List\bin\Debug\ArrayList_List.exe.config
+D:\dev\C#Work\Selfstudy_Winform2\ArrayList_List\bin\Debug\ArrayList_List.exe
+D:\dev\C#Work\Selfstudy_Winform2\ArrayList_List\bin\Debug\ArrayList_List.pdb
+D:\dev\C#Work\Selfstudy_Winform2\ArrayList_List\obj\Debug\ArrayList_List.csprojAssemblyReference.cache
+D:\dev\C#Work\Selfstudy_Winform2\ArrayList_List\obj\Debug\ArrayList_List.Properties.Resources.resources
+D:\dev\C#Work\Selfstudy_Winform2\ArrayList_List\obj\Debug\ArrayList_List.csproj.GenerateResource.cache
+D:\dev\C#Work\Selfstudy_Winform2\ArrayList_List\obj\Debug\ArrayList_List.csproj.CoreCompileInputs.cache
+D:\dev\C#Work\Selfstudy_Winform2\ArrayList_List\obj\Debug\ArrayList_List.exe
+D:\dev\C#Work\Selfstudy_Winform2\ArrayList_List\obj\Debug\ArrayList_List.pdb
+D:\dev\C#Work\Selfstudy_Winform2\ArrayList_List\obj\Debug\ArrayList_List.Form1.resources
