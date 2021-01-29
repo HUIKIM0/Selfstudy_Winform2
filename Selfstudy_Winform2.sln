@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simple Clicker", "Simple Cl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Queue_Stack", "Queue_Stack\Queue_Stack.csproj", "{05B2E056-014B-47AF-A25A-D30F18E7205E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayList_List", "ArrayList_List\ArrayList_List.csproj", "{4DB48CE5-0AED-47CC-AE3F-647D3FA878E0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Study_List", "ArrayList_List\Study_List.csproj", "{4DB48CE5-0AED-47CC-AE3F-647D3FA878E0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

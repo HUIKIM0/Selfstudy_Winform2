@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ArrayList_List
+namespace Study_List
 {
     static class Program
     {
