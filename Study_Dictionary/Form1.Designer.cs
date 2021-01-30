@@ -260,7 +260,7 @@ namespace Study_Dictionary
             // lblPlayerName
             // 
             this.lblPlayerName.AutoSize = true;
-            this.lblPlayerName.Location = new System.Drawing.Point(131, 302);
+            this.lblPlayerName.Location = new System.Drawing.Point(123, 302);
             this.lblPlayerName.Name = "lblPlayerName";
             this.lblPlayerName.Size = new System.Drawing.Size(15, 15);
             this.lblPlayerName.TabIndex = 4;
@@ -278,7 +278,7 @@ namespace Study_Dictionary
             // lblTotalCount
             // 
             this.lblTotalCount.AutoSize = true;
-            this.lblTotalCount.Location = new System.Drawing.Point(183, 329);
+            this.lblTotalCount.Location = new System.Drawing.Point(177, 329);
             this.lblTotalCount.Name = "lblTotalCount";
             this.lblTotalCount.Size = new System.Drawing.Size(15, 15);
             this.lblTotalCount.TabIndex = 6;

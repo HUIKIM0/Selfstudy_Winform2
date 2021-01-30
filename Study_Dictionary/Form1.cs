@@ -67,11 +67,11 @@ namespace Study_Dictionary
                     break;
 
                 case "pbox3":
-                    strSelectText = enCandidateName.예나.ToString();
+                    strSelectText = enCandidateName.우식.ToString();
                     break;
 
                 case "pbox4":
-                    strSelectText = enCandidateName.우식.ToString();
+                    strSelectText = enCandidateName.예나.ToString();
                     break;
 
                 default:
@@ -83,19 +83,23 @@ namespace Study_Dictionary
 
             if(iTotalCount > _PlayerCount)  //if 13 > 0
             {
-                /* enum은 인터저 형태
+                /* enum은 integer 형태
                    슈화 0
                    우기 1 이런식
-                   그래서 형변환 필요 형변환을 시켜주면 순번값이 enum형태로 바뀌게 되어있다
-                   enName이 슈화 0에서 0 을 가져간다 */
+                   enum으로 형변환을 시켜주면 순번값이 int -> enum형태로!
+                   _PlayerCount가 0일때, enClassmateName의 0번째 값을 가져감(슈화) */
                 enClassmateName enName = (enClassmateName)_PlayerCount;
 
                 _dic.Add(enName.ToString(), strSelectText);  //key->투표한 친구 value->후보자
 
-                fUIDisplay(iTotalCount, enName.ToString());   // 13,투표자이름 
+                fUIDisplay(iTotalCount, enName.ToString());   // 13, 투표자이름 
                 fDataGridViewDisplay();
 
                 _PlayerCount++;
+            }
+            else
+            {
+                lblTotalCount.Text = "투표가 끝났습니다";
             }
         }
 
