@@ -116,5 +116,7 @@ namespace Study_List
             dgViewList.AutoResizeRowHeadersWidth(DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders);
         }
 
+   
     }
 }
+

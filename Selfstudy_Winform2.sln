@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Queue_Stack", "Queue_Stack\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Study_List", "ArrayList_List\Study_List.csproj", "{4DB48CE5-0AED-47CC-AE3F-647D3FA878E0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Study_Dictionary", "Study_Dictionary\Study_Dictionary.csproj", "{3ADA5D18-B86B-4935-8CAC-297A64795C29}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{4DB48CE5-0AED-47CC-AE3F-647D3FA878E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4DB48CE5-0AED-47CC-AE3F-647D3FA878E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4DB48CE5-0AED-47CC-AE3F-647D3FA878E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3ADA5D18-B86B-4935-8CAC-297A64795C29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3ADA5D18-B86B-4935-8CAC-297A64795C29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3ADA5D18-B86B-4935-8CAC-297A64795C29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3ADA5D18-B86B-4935-8CAC-297A64795C29}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
