@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Study_List", "ArrayList_Lis
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Study_Dictionary", "Study_Dictionary\Study_Dictionary.csproj", "{3ADA5D18-B86B-4935-8CAC-297A64795C29}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Student_DataTable", "Student_DataTable\Student_DataTable.csproj", "{C62FDB6C-725B-4816-B611-E57746885773}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{3ADA5D18-B86B-4935-8CAC-297A64795C29}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3ADA5D18-B86B-4935-8CAC-297A64795C29}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3ADA5D18-B86B-4935-8CAC-297A64795C29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C62FDB6C-725B-4816-B611-E57746885773}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C62FDB6C-725B-4816-B611-E57746885773}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C62FDB6C-725B-4816-B611-E57746885773}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C62FDB6C-725B-4816-B611-E57746885773}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
