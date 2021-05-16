@@ -29,10 +29,10 @@ namespace Selfstudy_Winform2
         private void btnConfigSet_Click(object sender, EventArgs e)
         {
             
-
             string strText = tboxData.Text;  //Text
             bool bChecked = cboxData.Checked;  //Checkbox
             int iNumber = (int)numData.Value;  //NumbericUpDown
+         
 
             StringBuilder sb = new StringBuilder();
 
@@ -40,20 +40,21 @@ namespace Selfstudy_Winform2
             sb.Append(bChecked.ToString() + strEnter); //bool -> string 형변환
             sb.Append(iNumber.ToString() + strEnter);   //int -> string 형변환
 
-            // UI에서 작성 한 항목과 값을 Dictionary<Key, Value>로 저장
+            // UI에서 작성 한 항목과 값을 Dictionary<Key, Value>로 저장. 
             //static 형태라서 바로 접근 사용 _xml 이 아니다
             _dData.Add(CXMLControl._TEXT_DATA, strText);
-            _dData.Add(CXMLControl._CBOX_DATA, bChecked.ToString());
+            _dData.Add(CXMLControl._CBOX_DATA, bChecked.ToString());  //Dicionary<stirng,string>라서 형변환
             _dData.Add(CXMLControl._NUMBER_DATA, iNumber.ToString());
 
-            tboxConfigData.Text = sb.ToString();  //StringBuilder -> string 형변환
+            tboxConfigData.Text = sb.ToString();  //StringBuilder -> string 형변환. textbox에
         }
 
 
-        /*text 저장하기*/
+        /*text 저장하기  SaveFileDialog == SFDialog */
         private void btnTextSave_Click(object sender, EventArgs e)
         {
             string strFilePath = string.Empty;
+
 
             SFDialog.InitialDirectory = Application.StartupPath;  // ★프로그램 실행파일 위치
             SFDialog.FileName = "*.xml";  //파일 이름
@@ -66,16 +67,16 @@ namespace Selfstudy_Winform2
                 /* File.IO 사용 ver */
                 File.WriteAllText(strFilePath, tboxConfigData.Text);
 
-                /* XML 파일 생성. 저장할 데이터 _dData */
+                /* XML 파일 생성. 경로, 저장할 데이터 _dData */
                 _xml.fXML_Writer(strFilePath, _dData);
 
-                StreamWriter swSFDialog = new StreamWriter(strFilePath); //텍스트 파일 쓰기
+                StreamWriter swSFDialog = new StreamWriter(strFilePath); //텍스트 파일 쓰기(경로)
                 swSFDialog.WriteLine(tboxConfigData.Text);  //tboxCinfigData의 내용 파일 안에다 쓰기
                 swSFDialog.Close(); //다 쓰고 닫기
             }
         }
 
-        /* text 읽어오기 */
+        /* text 읽어오기 OpenFileDialog == OFDialog */
         private void btnTextLoad_Click(object sender, EventArgs e)
         {
             string strFilePath = string.Empty;
@@ -116,7 +117,7 @@ namespace Selfstudy_Winform2
             string[] strConfig = tboxConfigData.Text.Split(new char[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries); // 자르고 버리기
 
             tboxData.Text = strConfig[0];
-            cboxData.Checked = bool.Parse(strConfig[1]);    //string -> bool로 형변환
+            cboxData.Checked = bool.Parse(strConfig[1]);    //string -> bool로 형변환. 원래 형대로 돌려줌
             numData.Value = int.Parse(strConfig[2]);    //string -> int로 형변환
 
             /* 디렉토리에 있는 정보를 UI에 입력함 */

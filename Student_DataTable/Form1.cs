@@ -122,7 +122,7 @@ namespace Student_DataTable
             //이름이 적혀있으면
             if (!string.IsNullOrEmpty(tboxRegName.Text))
             {
-                foreach (DataRow ditem in ds.Tables[cboxRegClass.Text].Rows)   //한줄씩 Row 형태로 뽑기
+                foreach (DataRow ditem in ds.Tables[cboxRegClass.Text].Rows)   //DataSet에있는 Tables에서 Row찾아서 Row형태로
                 {
                     if (ditem["NAME"].Equals(tboxRegName.Text))
                     { 

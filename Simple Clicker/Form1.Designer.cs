@@ -127,7 +127,7 @@ namespace Simple_Clicker
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(43, 15);
             this.label2.TabIndex = 3;
-            this.label2.Text = "(500)";
+            this.label2.Text = "(300)";
             // 
             // label3
             // 
@@ -153,7 +153,6 @@ namespace Simple_Clicker
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.FormClosed += Form1_FormClosed;
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

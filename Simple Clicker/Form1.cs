@@ -20,7 +20,7 @@ namespace Simple_Clicker
         string strPath = Application.StartupPath + "\\Save.txt";
         
 
-        private double iTick = 0; //한 Tick당 더할 값
+        private double iTick = 0; //한 Tick당 더할 값. 포인트!! Level 1누르면 +1됨
         private double iTotal = 0; //전체 값
 
         private int i1Add = 1;  // 1 * LEVEL 값
@@ -78,7 +78,7 @@ namespace Simple_Clicker
         }
 
 
-        //타이머에서 호출할 Event
+        //타이머에서 호출할 Event 
         private void oTimer_Tick(object sender, EventArgs e)
         {
             iTick = i1Add + i3Add + i50Add;
@@ -105,7 +105,7 @@ namespace Simple_Clicker
                         iTotal = iTotal - 100;
 
                         i1Level++;
-                        i1Add = 1 * i1Level;
+                        i1Add = 1 * i1Level;    //1 Level의 tick(포인트) 가 나온다
                     }
                     break;
                 case "btn3Add":
@@ -114,7 +114,7 @@ namespace Simple_Clicker
                         iTotal = iTotal - 300;
 
                         i3Level++;
-                        i3Add = 3 * i3Level;
+                        i3Add = 3 * i3Level;    
                     }
                     break;
                 case "btn50Add":
