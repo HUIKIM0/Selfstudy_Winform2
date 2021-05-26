@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 namespace Study_Dictionary
 {
@@ -44,8 +39,11 @@ namespace Study_Dictionary
 
         Dictionary<string, string> _dic = new Dictionary<string, string>();
         //Hashtable _ht = new Hashtable();
+        // _ht["강아지"] ="멍멍";      Dictionary처럼 key value.
+        // _ht["고양이"] ="야옹";   
 
-        public Form1()
+
+    public Form1()
         {
             InitializeComponent();
         }
@@ -81,7 +79,7 @@ namespace Study_Dictionary
             //Enum ClassmateName의 개수(13명)
             int iTotalCount = Enum.GetValues(typeof(enClassmateName)).Length;
 
-            if(iTotalCount > _PlayerCount)  //if 13 > 0
+            if (iTotalCount > _PlayerCount)  //if 13 > 0
             {
                 /* enum은 integer 형태
                    슈화 0

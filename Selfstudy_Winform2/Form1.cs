@@ -11,12 +11,15 @@ using System.Windows.Forms;
 
 namespace Selfstudy_Winform2
 {
+
     public partial class Form1 : Form
     {
 
         CXMLControl _xml = new CXMLControl(); // 만들어 놓은 CXMLControl을 사용. 선언 및 초기화 (기본 생성자)
         Dictionary<string, string> _dData = new Dictionary<string, string>();  // CXMLControl과 Data를 _dData 통해 주고받기. Dictionary형
-     
+
+
+
 
         public Form1()
         {
@@ -125,8 +128,8 @@ namespace Selfstudy_Winform2
             cboxData.Checked = bool.Parse(_dData[CXMLControl._CBOX_DATA]);
             numData.Value = int.Parse(_dData[CXMLControl._NUMBER_DATA]);
 
-
         }
+
     }
 }
 
