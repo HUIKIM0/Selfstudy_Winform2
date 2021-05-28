@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
@@ -41,6 +42,7 @@ namespace Study_Dictionary
         //Hashtable _ht = new Hashtable();
         // _ht["강아지"] ="멍멍";      Dictionary처럼 key value.
         // _ht["고양이"] ="야옹";   
+        // _ht.Add("햄스터","찍찍");
 
 
     public Form1()
@@ -50,6 +52,7 @@ namespace Study_Dictionary
 
         private void pbox_Click(object sender, EventArgs e)
         {
+
             string strSelectText = string.Empty;
 
             PictureBox pbox = sender as PictureBox;
@@ -139,6 +142,8 @@ namespace Study_Dictionary
             // 0 / 0
             lblTotalCount.Text = string.Format("{0} / {1}", _PlayerCount + 1, iTotalCount);  //  1/13  2/13.. 
             lblPlayerName.Text = strPlayerName;   //투표자 이름
+
+
         }
 
 
