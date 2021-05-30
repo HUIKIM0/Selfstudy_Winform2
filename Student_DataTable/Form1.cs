@@ -32,14 +32,15 @@ namespace Student_DataTable
             bool CheckIsTable = false;  
 
 
-            // DataSet의 에 넣어준 값에 해당하는 DataTable이 있는지. 있으면 true
+            // DataSet의 에 넣어준 값에 해당하는 DataTable이 있는지. 있으면 true로 바꿈
             if (ds.Tables.Contains(cboxRegClass.Text))
             {
                 CheckIsTable = true;
             }
 
             /* 넣어준 값이 기존의 DataTable이 없다! 여기로 옴 ->생성*/
-            if (!CheckIsTable)
+            /* 이미 있는 DataTable인 경우 !CheckIsTable는 false이다. 위에서 CheckIsTable = true; 해줬기 때문에 해당사항 X else로 감 */
+            if (!CheckIsTable)    
             {
                 dt = new DataTable(cboxRegClass.Text);
 
@@ -77,7 +78,7 @@ namespace Student_DataTable
             row["Ref"] = tboxRegRef.Text;
 
 
-            if (CheckIsTable)
+            if (CheckIsTable)    // true면 여기로
             {
                 ds.Tables[cboxRegClass.Text].Rows.Add(row); // DataSet에 해당 DataTalbe이 있을 경우 기존 Table에 Row를 추가한다
             }
