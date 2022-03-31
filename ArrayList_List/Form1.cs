@@ -20,8 +20,9 @@ namespace Study_List
         public Form1()
         {
             InitializeComponent();
-            dgViewList.Columns.Add("dgValue", "Value");  //Column추가
+            dgViewList.Columns.Add("food", "음식");  //Column추가
 
+            //dgViewList["food", 0].Value = "cake";
         }
 
         private void pbox_Click(object sender, EventArgs e)
