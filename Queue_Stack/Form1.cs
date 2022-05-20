@@ -26,6 +26,7 @@ namespace Queue_Stack
         /* 버튼 In */
         private void btnDataIn_Click(object sender, EventArgs e)
         {
+
             Random rd = new Random();
             int iData = rd.Next(1, 101); 
 
@@ -103,7 +104,7 @@ namespace Queue_Stack
         private void fQueueDataDisplay()
         {
             int[] iArray = _Queue.ToArray();
-            Array.Resize(ref iArray, 6);  //배열 사이즈 고정
+            Array.Resize(ref iArray, 6);  //배열 사이즈 고정 ★ 안하면 에러
 
             lblQueue1.Text = (iArray[0] == 0 ? "" : iArray[0].ToString());
             lblQueue2.Text = (iArray[0] == 0 ? "" : iArray[1].ToString());
@@ -119,7 +120,7 @@ namespace Queue_Stack
         private void fStackDataDisplay()
         {
             int[] iArray = _Stack.ToArray();
-            Array.Resize(ref iArray, 6);  //배열 사이즈 고정
+            Array.Resize(ref iArray, 6);  
 
             lblStack1.Text = (iArray[0] == 0 ? "" : iArray[0].ToString());
             lblStack2.Text = (iArray[0] == 0 ? "" : iArray[1].ToString());
