@@ -1,10 +1,10 @@
 D:\dev\C#Work\Selfstudy_Winform2\Study_Dictionary\bin\Debug\Study_Dictionary.exe.config
 D:\dev\C#Work\Selfstudy_Winform2\Study_Dictionary\bin\Debug\Study_Dictionary.exe
 D:\dev\C#Work\Selfstudy_Winform2\Study_Dictionary\bin\Debug\Study_Dictionary.pdb
-D:\dev\C#Work\Selfstudy_Winform2\Study_Dictionary\obj\Debug\Study_Dictionary.csprojAssemblyReference.cache
 D:\dev\C#Work\Selfstudy_Winform2\Study_Dictionary\obj\Debug\Study_Dictionary.Form1.resources
 D:\dev\C#Work\Selfstudy_Winform2\Study_Dictionary\obj\Debug\Study_Dictionary.Properties.Resources.resources
 D:\dev\C#Work\Selfstudy_Winform2\Study_Dictionary\obj\Debug\Study_Dictionary.csproj.GenerateResource.cache
 D:\dev\C#Work\Selfstudy_Winform2\Study_Dictionary\obj\Debug\Study_Dictionary.csproj.CoreCompileInputs.cache
 D:\dev\C#Work\Selfstudy_Winform2\Study_Dictionary\obj\Debug\Study_Dictionary.exe
 D:\dev\C#Work\Selfstudy_Winform2\Study_Dictionary\obj\Debug\Study_Dictionary.pdb
+D:\dev\C#Work\Selfstudy_Winform2\Study_Dictionary\obj\Debug\Study_Dictionary.csproj.AssemblyReference.cache

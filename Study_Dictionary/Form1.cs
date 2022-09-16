@@ -9,7 +9,7 @@ namespace Study_Dictionary
 {
     public partial class Form1 : Form
     {
-        enum enCandidateName
+        enum enReaderName
         {
             보검,
             수진,
@@ -60,19 +60,19 @@ namespace Study_Dictionary
             {
                 //pbox1.Name을 클릭 ->보검이를 선택함
                 case "pbox1":
-                    strSelectText = enCandidateName.보검.ToString();
+                    strSelectText = enReaderName.보검.ToString();
                     break;
 
                 case "pbox2":
-                    strSelectText = enCandidateName.수진.ToString();
+                    strSelectText = enReaderName.수진.ToString();
                     break;
 
                 case "pbox3":
-                    strSelectText = enCandidateName.우식.ToString();
+                    strSelectText = enReaderName.우식.ToString();
                     break;
 
                 case "pbox4":
-                    strSelectText = enCandidateName.예나.ToString();
+                    strSelectText = enReaderName.예나.ToString();
                     break;
 
                 default:
@@ -170,6 +170,5 @@ namespace Study_Dictionary
 
             dgViewList.AutoResizeRowHeadersWidth(DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders);
         }
-
     }
 }
