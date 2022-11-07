@@ -107,6 +107,8 @@ namespace Study_Dictionary
 
         private void fUIDisplay(int iTotalCount, string strPlayerName)
         {
+            lblPlayerName.Text = strPlayerName;   //투표자 이름
+
             int i보검 = 0;
             int i수진 = 0;
             int i우식 = 0;
