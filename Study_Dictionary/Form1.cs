@@ -45,7 +45,7 @@ namespace Study_Dictionary
         // _ht.Add("햄스터","찍찍");
 
 
-    public Form1()
+        public Form1()
         {
             InitializeComponent();
         }
@@ -144,8 +144,6 @@ namespace Study_Dictionary
             // 0 / 0
             lblTotalCount.Text = string.Format("{0} / {1}", _PlayerCount + 1, iTotalCount);  //  1/13  2/13.. 
             lblPlayerName.Text = strPlayerName;   //투표자 이름
-
-
         }
 
 

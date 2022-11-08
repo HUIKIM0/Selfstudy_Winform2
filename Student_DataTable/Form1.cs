@@ -25,8 +25,8 @@ namespace Student_DataTable
         /* 등록 버튼
            클릭했을 경우 반에 대한 DataTable을 만들고, DataSet에 등록
            1. DataSet에 해당 데이터가 존재하는지?
-           2-1. 존재하지 않는다 -> DataTable 생성 후 DataSet에 넣는다
-           2-2. 존재한다 -> 기존 DataTable 가져온다 */
+           2-1. 존재하지 않는다 -> 반 DataTable 생성 후 DataSet에 넣는다
+           2-2. 존재한다 -> 기존 반 DataTable 가져온다 */
         private void btnReg_Click(object sender, EventArgs e)
         {
             bool CheckIsTable = false;  
@@ -88,7 +88,7 @@ namespace Student_DataTable
                 ds.Tables.Add(dt);   //등록한 DataTable을 DataSet에 넣는다
             }
 
-
+            cboxViewClass_SelectedIndexChanged(this, null);
         }
 
         /* Data 삭제 버튼. 맨 왼쪽 칼럼의 번호 클릭 후 삭제버튼 눌러야 삭제됨  */
