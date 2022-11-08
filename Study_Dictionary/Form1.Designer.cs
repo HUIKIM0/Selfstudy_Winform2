@@ -49,6 +49,8 @@ namespace Study_Dictionary
             this.label4 = new System.Windows.Forms.Label();
             this.lblTotalCount = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblNextPlayer = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgViewList)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbox4)).BeginInit();
@@ -260,7 +262,7 @@ namespace Study_Dictionary
             // lblPlayerName
             // 
             this.lblPlayerName.AutoSize = true;
-            this.lblPlayerName.Location = new System.Drawing.Point(123, 302);
+            this.lblPlayerName.Location = new System.Drawing.Point(121, 302);
             this.lblPlayerName.Name = "lblPlayerName";
             this.lblPlayerName.Size = new System.Drawing.Size(15, 15);
             this.lblPlayerName.TabIndex = 4;
@@ -293,11 +295,31 @@ namespace Study_Dictionary
             this.label6.TabIndex = 7;
             this.label6.Text = "Dictionary의 Data를 화면에 보여줍니다";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(171, 302);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(92, 15);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "다음 투표자:";
+            // 
+            // lblNextPlayer
+            // 
+            this.lblNextPlayer.AutoSize = true;
+            this.lblNextPlayer.Location = new System.Drawing.Point(258, 302);
+            this.lblNextPlayer.Name = "lblNextPlayer";
+            this.lblNextPlayer.Size = new System.Drawing.Size(15, 15);
+            this.lblNextPlayer.TabIndex = 9;
+            this.lblNextPlayer.Text = "-";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 645);
+            this.Controls.Add(this.lblNextPlayer);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.lblTotalCount);
             this.Controls.Add(this.label4);
@@ -342,6 +364,8 @@ namespace Study_Dictionary
         private System.Windows.Forms.Label lblPick3;
         private System.Windows.Forms.Label lblPick2;
         private System.Windows.Forms.Label lblPick1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblNextPlayer;
     }
 }
 

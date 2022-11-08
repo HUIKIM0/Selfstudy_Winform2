@@ -90,10 +90,11 @@ namespace Study_Dictionary
                    enum으로 형변환을 시켜주면 순번값이 int -> enum형태로!
                    _PlayerCount가 0일때, enClassmateName의 0번째 값을 가져감(슈화) */
                 enClassmateName enName = (enClassmateName)_PlayerCount;
+                enClassmateName enNextName = enName + 1;
 
-                _dic.Add(enName.ToString(), strSelectText);  //key->투표한 친구 value->후보자
+                _dic.Add(enName.ToString(), strSelectText);  //key->투표한 친구 value->후보자 
 
-                fUIDisplay(iTotalCount, enName.ToString());   // 13, 투표자이름 
+                fUIDisplay(iTotalCount, enName.ToString(), enNextName.ToString()) ;   // 13, 투표자이름 , 다음 투표자 이름
                 fDataGridViewDisplay();
 
                 _PlayerCount++;
@@ -105,10 +106,8 @@ namespace Study_Dictionary
         }
 
 
-        private void fUIDisplay(int iTotalCount, string strPlayerName)
+        private void fUIDisplay(int iTotalCount, string strPlayerName,string strNextPlayerName)
         {
-            lblPlayerName.Text = strPlayerName;   //투표자 이름
-
             int i보검 = 0;
             int i수진 = 0;
             int i우식 = 0;
@@ -144,6 +143,17 @@ namespace Study_Dictionary
             // 0 / 0
             lblTotalCount.Text = string.Format("{0} / {1}", _PlayerCount + 1, iTotalCount);  //  1/13  2/13.. 
             lblPlayerName.Text = strPlayerName;   //투표자 이름
+
+
+            if(_PlayerCount+1 < iTotalCount)
+            {
+                lblNextPlayer.Text = strNextPlayerName;   //다음 투표자 이름
+            }
+            else
+            {
+                lblNextPlayer.Text = string.Format("-");   // 13/13 된거면 다음 투표자가 없음
+            }
+            
         }
 
 
@@ -165,10 +175,12 @@ namespace Study_Dictionary
 
             foreach (DataGridViewRow oRow in dgViewList.Rows)
             {
-                oRow.HeaderCell.Value = oRow.Index.ToString();
+                //oRow.HeaderCell.Value = oRow.Index.ToString();
+                oRow.HeaderCell.Value = string.Format("{0}", oRow.Index + 1);
             }
 
             dgViewList.AutoResizeRowHeadersWidth(DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders);
         }
+
     }
 }
